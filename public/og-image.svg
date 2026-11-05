@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1000" cy="150" r="300" fill="#2563eb" opacity="0.12" filter="blur(60px)" />
+  <circle cx="200" cy="500" r="250" fill="#4f46e5" opacity="0.1" filter="blur(60px)" />
+  
+  <g transform="translate(100, 100)">
+    <rect width="70" height="70" rx="18" fill="url(#brand)" />
+    <path d="M22 20 L35 38 L48 20 M35 38 L35 50" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <text x="95" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="-0.5px">
+      YADU<tspan fill="#3b82f6">.</tspan>ENTERPRISES
+    </text>
+  </g>
+
+  <text x="100" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="900" fill="#ffffff" letter-spacing="-1px">
+    We build websites &amp; web apps
+  </text>
+  <text x="100" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="900" fill="url(#brand)" letter-spacing="-1px">
+    that grow your empire.
+  </text>
+
+  <text x="100" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#94a3b8">
+    Custom Web Apps • High-Converting Sites • E-Commerce • Chandigarh, India
+  </text>
+
+  <g transform="translate(100, 490)">
+    <rect width="280" height="50" rx="12" fill="#1e293b" />
+    <text x="25" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#38bdf8">
+      Lighthouse 95+ Guaranteed
+    </text>
+  </g>
+  <g transform="translate(400, 490)">
+    <rect width="280" height="50" rx="12" fill="#1e293b" />
+    <text x="25" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#34d399">
+      100% Full IP &amp; Code Ownership
+    </text>
+  </g>
+</svg>
