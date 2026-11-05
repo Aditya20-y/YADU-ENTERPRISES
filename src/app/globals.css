@@ -4,37 +4,37 @@
 
 @layer base {
   :root {
-    --background: #f8fafc;
-    --foreground: #090d16;
+    --background: #fdfbf7;
+    --foreground: #1c1409;
     --card: #ffffff;
-    --card-foreground: #090d16;
-    --primary: #2563eb;
+    --card-foreground: #1c1409;
+    --primary: #d97706;
     --primary-foreground: #ffffff;
-    --secondary: #eff6ff;
-    --secondary-foreground: #1d4ed8;
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
-    --accent: #3b82f6;
+    --secondary: #fef3c7;
+    --secondary-foreground: #92400e;
+    --muted: #f7f1e6;
+    --muted-foreground: #7c6f5d;
+    --accent: #f59e0b;
     --accent-foreground: #ffffff;
-    --border: #e2e8f0;
-    --ring: #3b82f6;
+    --border: #f1e4cf;
+    --ring: #f59e0b;
   }
 
   .dark {
-    --background: #090d16;
-    --foreground: #f8fafc;
-    --card: #111726;
-    --card-foreground: #f8fafc;
-    --primary: #3b82f6;
-    --primary-foreground: #ffffff;
-    --secondary: #172138;
-    --secondary-foreground: #93c5fd;
-    --muted: #141c2e;
-    --muted-foreground: #94a3b8;
-    --accent: #60a5fa;
-    --accent-foreground: #090d16;
-    --border: #1e293b;
-    --ring: #60a5fa;
+    --background: #0d0a06;
+    --foreground: #fcf8f0;
+    --card: #17110a;
+    --card-foreground: #fcf8f0;
+    --primary: #f59e0b;
+    --primary-foreground: #0d0a06;
+    --secondary: #261c10;
+    --secondary-foreground: #fde68a;
+    --muted: #1e160d;
+    --muted-foreground: #bda891;
+    --accent: #fbbf24;
+    --accent-foreground: #0d0a06;
+    --border: #382613;
+    --ring: #fbbf24;
   }
 
   * {
@@ -66,35 +66,35 @@
   }
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility with warm tint */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(253, 251, 247, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 .dark .glass-panel {
-  background: rgba(17, 23, 38, 0.75);
+  background: rgba(23, 17, 10, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Subtle grid pattern background */
+/* Subtle warm golden grid pattern */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(217, 119, 6, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 119, 6, 0.05) 1px, transparent 1px);
 }
 .dark .bg-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
 }
 
-/* Subtle glow radial gradient */
+/* Radiant golden hero glow */
 .hero-glow {
-  background: radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.15), transparent 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.22), transparent 70%);
 }
 .dark .hero-glow {
-  background: radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.22), transparent 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(251, 191, 36, 0.28), transparent 70%);
 }

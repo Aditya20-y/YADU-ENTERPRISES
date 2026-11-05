@@ -14,9 +14,6 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle("dark", savedTheme === "dark");
     } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      // Default to light as requested, but if system prefers dark, check user choice
-      // If user specified "Light mode by default", default is light unless saved otherwise
       setTheme("light");
       document.documentElement.classList.remove("dark");
     }
@@ -31,7 +28,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
 
   if (!mounted) {
     return (
-      <div className={`w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 ${className}`} />
+      <div className={`w-9 h-9 rounded-lg border border-amber-200/60 dark:border-amber-800/60 ${className}`} />
     );
   }
 
@@ -40,10 +37,10 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       onClick={toggleTheme}
       type="button"
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-      className={`relative inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-400 transition-colors shadow-sm ${className}`}
+      className={`relative inline-flex items-center justify-center w-9 h-9 rounded-lg border border-amber-200 dark:border-amber-800/80 bg-white/90 dark:bg-[#1a130a]/90 text-stone-700 dark:text-amber-300 hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-400 transition-colors shadow-sm ${className}`}
     >
       {theme === "light" ? (
-        <Moon className="w-4 h-4 transition-transform hover:-rotate-12" />
+        <Moon className="w-4 h-4 transition-transform hover:-rotate-12 text-amber-700" />
       ) : (
         <Sun className="w-4 h-4 text-amber-400 transition-transform hover:rotate-45" />
       )}

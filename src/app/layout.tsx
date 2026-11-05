@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Image from "next/image";
 import "./globals.css";
 import { SITE_CONFIG } from "@/data/site-config";
 
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.company.name,
     images: [
       {
-        url: "/og-image.svg",
+        url: "/images/bg-krishna.jpg",
         width: 1200,
         height: 630,
         alt: `${SITE_CONFIG.company.name} - Web Applications & High-Converting Websites`,
@@ -56,14 +57,15 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#090d16" },
+    { media: "(prefers-color-scheme: light)", color: "#fdfbf7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d0a06" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -81,7 +83,7 @@ export default function RootLayout({
     name: SITE_CONFIG.company.name,
     legalName: SITE_CONFIG.company.legalName,
     url: SITE_CONFIG.company.url,
-    logo: `${SITE_CONFIG.company.url}/favicon.svg`,
+    logo: `${SITE_CONFIG.company.url}/images/logo.jpg`,
     description: SITE_CONFIG.company.subtext,
     telephone: SITE_CONFIG.company.phone,
     email: SITE_CONFIG.company.email,
@@ -129,7 +131,23 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen">
+      <body className="antialiased bg-[#fdfbf7] dark:bg-[#0d0a06] text-[#1c1409] dark:text-[#fcf8f0] min-h-screen relative selection:bg-amber-500 selection:text-white">
+        {/* Subtle, High-End Ambient Background from Lord Krishna Art */}
+        <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+          {/* Background image container */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.11] dark:opacity-[0.16] transition-opacity duration-500"
+            style={{
+              backgroundImage: `url('/images/bg-krishna.jpg')`,
+              backgroundAttachment: "fixed",
+            }}
+          />
+          {/* Subtle warm radiant gradient mesh overlay to blend with foreground */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#fdfbf7]/85 via-[#fdfbf7]/60 to-[#fdfbf7]/90 dark:from-[#0d0a06]/90 dark:via-[#0d0a06]/75 dark:to-[#0d0a06]/95" />
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-amber-400/10 dark:bg-amber-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 left-10 w-[600px] h-[600px] bg-amber-600/5 dark:bg-amber-600/10 rounded-full blur-3xl" />
+        </div>
+
         {children}
       </body>
     </html>
